@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DuiShela Ltd.</title>
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+  </head>
+  <body>
+    <header>
+    <nav class="nav">
+      <a href="/" class="logo">DuiShela</a>
+
+      <div class="hamburger">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+
+      <div class="nav__link hide">
+
+        {% if request.user.is_authenticated %}
+          <a href="{% url 'logout' %}">Logout</a>
+        {% else %}
+          <a href=" {% url 'signup' %}">Sign Up</a>
+          <a href="{% url 'login' %}">Login</a>
+        {% endif %}
+
+      </div>
+    </nav>
+  </header>
+
+    {% block content %}
+
+
+    <div id="welcome">
+      <h1>Welcome to DuiShela</h1>
+    </div>
+
+    <div id="get_started">
+      <a href="{% url 'signup' %}" id="gotosignup">Getting Started</a>
+      <a href="{% url 'login' %}" id="gotologin">Already have an account?</a>
+    </div>
+
+    {% endblock %}
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/cesiumjs/1.78/Build/Cesium/Cesium.js"></script>
+    <script <source src="{% static 'js/index.js' %}"></script>
+  </body>
+</html>

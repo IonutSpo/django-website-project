@@ -1,0 +1,218 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* home - signup - login pages */
+
+#welcome {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -180px;
+  width: 500px;
+  height: 100px;
+  font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+}
+
+.title_auth {
+  margin-top: 50px;
+  margin-left: 250px;
+  width: 500px;
+  height: 50px;
+  font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+}
+
+#get_started{
+  position: absolute;
+  top: 60%;
+  left: 52%;
+  margin-top: -50px;
+  margin-left: -180px;
+  width: 230px;
+  height: 100px;
+}
+
+#gotosignup{
+  background-color: initial;
+  background-image: linear-gradient(-180deg, #00D775, #00BD68);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+  height: 44px;
+  line-height: 44px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 100%;
+  z-index: 9;
+  border: 0;
+}
+
+#gotosignup:hover {
+  background: #00bd68;
+}
+
+#gotologin{
+  font-size: 12px;
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
+  color: #1E90FF;
+  position: absolute;
+  top: 100%;
+  left: 90%;
+  margin-top: -30px;
+  margin-left: -180px;
+  width: 230px;
+  height: 100px;
+}
+
+/* nav styles */
+
+.nav {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;;
+  font-style: oblique;
+  color: white;
+  padding-left: 20px;
+}
+
+.hamburger {
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  display: block;
+  width: 40px;
+  height: 5px;
+  margin-bottom: 10px;
+  background-color: black;
+}
+
+.nav__link {
+  position: fixed;
+  width: 94%;
+  top: 5rem;
+  left: 18px;
+  background-color: lightblue;
+}
+
+.nav__link a {
+  color: white;
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.nav__link a:hover {
+  background-color: lightcoral;
+}
+
+.hide {
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
+  .nav__link {
+    display: block;
+    position: static;
+    width: auto;
+    margin-right: 20px;
+    background: none;
+  }
+
+  .nav__link a {
+    display: inline-block;
+    padding: 15px 20px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+/* forms */
+
+form{
+    margin-top: 100px;
+    margin:auto;
+    width: 50%;
+}
+
+.form-control{
+    width: 100%;
+    font-size: 20px;
+}
+.form-group{
+    margin-top: 10px;
+}
+.label{
+    margin-top: 20px;
+}
+.btn{
+    border: none;
+    background-color: black;
+    cursor: pointer;
+    color: white;
+    padding: 15px;
+}
+.link{
+    color: black;
+    text-decoration: none;
+}
+.error{
+    color: red;
+    font-size: 12;
+}
+.alert{
+    padding: 20px;
+    background-color: lightgreen;
+    color: white;
+    text-align: center;
+}
+.alert-error{
+    padding: 20px;
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+
+.pagination{
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}

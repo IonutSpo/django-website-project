@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form class="signup" method="post" enctype="multipart/form-data">
+  <h1 class="title_auth">Sign Up</h1>
+  {% csrf_token %}
+
+  {% for field in form %}
+    <div class="form-group">
+      <p class="label">{{ field.label }} </p>
+      {{ field }}
+
+      {% if form.errors %}
+        <p>{{ form.errors }}</p>
+      {% endif %}
+
+    </div>
+  {% endfor %}
+    <div class="form-group">
+      <input type="submit" value="Sign Up" class="btn">
+    </div>
+</form>
+
+{% endblock %}
