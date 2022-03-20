@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <header id="profileDashboard">
+
+        <h1>Welcome to your dashboard!</h1>
+          <br/>
+        <h3>Your account details: </h3>
+
+    </header>
+
+    <br/>
+    <br/>
+
+      <div id="profileDetails">
+
+        <p>Username: {{ user.username }}</p>
+        <p>First Name: {{ user.first_name }}</p>
+        <p>Last Name: {{ user.last_name }}</p>
+        <p>Email: {{ user.email }}</p>
+        {% for detail in profile %}
+          <p>Date of Birth: {{ detail.date_of_birth }}</p>
+          <p>Personal Numeric Code: {{ detail.personal_number }}</p>
+          <p>Phone Number: {{ detail.phone_number }}</p>
+          <p>Address: {{ detail.address }}</p>
+        {% endfor %}
+        <p>Date Joined: {{ user.date_joined }}</p>
+
+      </div>
+
+      <div id="update">
+
+        <a href="{% url 'update_profile' %}">Update your profile</a>
+
+      </div>
+      <div id="delete">
+
+        <a href="{% url 'delete_user' %}">Delete profile</a>
+
+      </div>
+
+
+
+
+    </div>
+
+{% endblock %}

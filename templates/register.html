@@ -6,17 +6,32 @@
   <h1 class="title_auth">Sign Up</h1>
   {% csrf_token %}
 
-  {% for field in form %}
+
     <div class="form-group">
-      <p class="label">{{ field.label }} </p>
-      {{ field }}
+      <p>{{ profile_form.personal_number.label }}</p>
+      {{ profile_form.personal_number }}
+      {{ profile_form.personal_number.errors }}
 
-      {% if form.errors %}
-        <p>{{ form.errors }}</p>
-      {% endif %}
-
-    </div>
+  {% for user_field in user_form %}
+      <p class="label">{{ user_field.label }} </p>
+      {{ user_field }}
+      {{ user_field.errors }}
   {% endfor %}
+
+    <p>{{ profile_form.phone_number.label }}</p>
+    {{ profile_form.phone_number }}
+    {{ profile_form.phone_number.errors }}
+
+    <p>{{ profile_form.address.label }}</p>
+    {{ profile_form.address }}
+    {{ profile_form.address.errors }}
+
+    <p>{{ profile_form.date_of_birth.label }}</p>
+    {{ profile_form.date_of_birth}}
+    {{ profile_form.date_of_birth.errors }}
+
+   </div>
+   
     <div class="form-group">
       <input type="submit" value="Sign Up" class="btn">
     </div>

@@ -1,14 +1,3 @@
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: sans-serif;
-}
-
 a {
   text-decoration: none;
   color: black;
@@ -38,7 +27,7 @@ a {
   font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 }
 
-#get_started{
+#get_started {
   position: absolute;
   top: 60%;
   left: 52%;
@@ -48,7 +37,7 @@ a {
   height: 100px;
 }
 
-#gotosignup{
+#gotosignup {
   background-color: initial;
   background-image: linear-gradient(-180deg, #00D775, #00BD68);
   border-radius: 5px;
@@ -79,7 +68,7 @@ a {
   background: #00bd68;
 }
 
-#gotologin{
+#gotologin {
   font-size: 12px;
   font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
   color: #1E90FF;
@@ -139,7 +128,7 @@ a {
 }
 
 .nav__link a:hover {
-  background-color: lightcoral;
+  background-color: #808080;
 }
 
 .hide {
@@ -184,6 +173,8 @@ form{
     margin-top: 20px;
 }
 .btn{
+    margin-top: 30px;
+    margin-right: 200px;
     border: none;
     background-color: black;
     cursor: pointer;
@@ -211,8 +202,102 @@ form{
     text-align: center;
 }
 
-.pagination{
-    display: flex;
-    justify-content: space-between;
-    width: 30%;
+.message {
+	border-radius: 10px;
+	box-shadow: 3px 3px 4px 0px rgba(50, 50, 50, 0.75);
+	color: white;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	text-align: center;
+	width: 80%;
+}
+
+.message.success {
+	background-color: green;
+}
+
+.message.error {
+	background-color: red;
+}
+
+/* profile */
+
+#profileDashboard {
+  font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  text-align: center;
+}
+
+#profileDetails {
+  margin: auto;
+  text-align: center;
+  width: 800px;
+  font-family: 'Courier New', monospace;
+  background-color: #E0E0E0;
+}
+
+#update {
+background-color: initial;
+background-image: linear-gradient(-180deg, #20B2AA, #20B2AA);
+border-radius: 5px;
+box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+color: #FFFFFF;
+cursor: pointer;
+display: inline-block;
+font-size: 12px;
+height: 35px;
+line-height: 35px;
+outline: 0;
+overflow: hidden;
+padding: 0 20px;
+margin-left: 400px;
+pointer-events: auto;
+position: relative;
+text-align: center;
+touch-action: manipulation;
+user-select: none;
+-webkit-user-select: none;
+vertical-align: top;
+white-space: nowrap;
+width: 20%;
+z-index: 9;
+border: 0;
+}
+
+#update:hover {
+background: #009999;
+}
+
+#delete {
+background-color: initial;
+background-image: linear-gradient(-180deg, #B22222, #B22222);
+border-radius: 5px;
+box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+color: #FFFFFF;
+cursor: pointer;
+display: inline-block;
+font-size: 12px;
+height: 35px;
+line-height: 35px;
+outline: 0;
+overflow: hidden;
+padding: 0 20px;
+
+pointer-events: auto;
+position: relative;
+text-align: center;
+touch-action: manipulation;
+user-select: none;
+-webkit-user-select: none;
+vertical-align: top;
+white-space: nowrap;
+width: 20%;
+z-index: 9;
+border: 0;
+}
+
+#delete:hover {
+background: #800000;
 }

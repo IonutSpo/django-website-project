@@ -1,0 +1,65 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Update your profile</title>
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+  </head>
+  <body>
+
+    <div class="container">
+      {% if messages %}
+        {% for message in messages %}
+
+          <div class="alert" role="alert">
+            {{ message }}
+            <button type="button" class="btn" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+
+        {% endfor %}
+      {% endif %}
+    </div>
+
+    <form class="update_form" method="post" enctype="multipart/form-data">
+      <h1 class="title_auth">Update your profile</h1>
+      {% csrf_token %}
+
+        <div class="form-group">
+          <p>{{ profile_form.personal_number.label }}</p>
+          {{ profile_form.personal_number }}
+          {{ profile_form.personal_number.errors }}
+
+          {% for user_field in user_form %}
+          <p class="label">{{ user_field.label }} </p>
+          {{ user_field }}
+          {{ user_field.errors }}
+          {% endfor %}
+
+          <p>{{ profile_form.phone_number.label }}</p>
+          {{ profile_form.phone_number }}
+          {{ profile_form.phone_number.errors }}
+
+          <p>{{ profile_form.address.label }}</p>
+          {{ profile_form.address }}
+          {{ profile_form.address.errors }}
+
+          <p>{{ profile_form.date_of_birth.label }}</p>
+          {{ profile_form.date_of_birth}}
+          {{ profile_form.date_of_birth.errors }}
+
+        </div>
+
+          <input type="submit" value="Update" class="btn">
+          <a href="{% url 'profile' %}">Changed your mind? Back to profile.</a>
+        </div>
+    </form>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/cesiumjs/1.78/Build/Cesium/Cesium.js"></script>
+    <script <source src="{% static 'js/index.js' %}"></script>
+  </body>
+</html>
